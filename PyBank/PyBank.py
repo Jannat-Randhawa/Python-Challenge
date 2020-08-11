@@ -33,5 +33,12 @@ with open(csvpath, newline='') as csvfile:
     greatest_increase = int(row[1])
     greatest_increase_month = row[0]
 
-    
+    #loop calculation 
+    for row in csvreader: 
+
+        #Calculate total months 
+        total_months += 1 
+        #Total Net amount 
+        net_amount += int(row[1])
+
 
