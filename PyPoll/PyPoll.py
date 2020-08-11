@@ -36,3 +36,9 @@ with open(csvpath, newline='') as csvfile:
             li_votes += 1
         else:
             otooley_votes += 1
+
+        # Calculate the percentage of votes for each candidate 
+        khan_percent = khan_votes/ total_votes
+        correy_percent = correy_votes / total_votes
+        li_percent = li_votes / total_votes
+        otooley_percent = otooley_votes / total_votes
