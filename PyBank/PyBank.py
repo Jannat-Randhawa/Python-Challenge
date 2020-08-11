@@ -51,6 +51,11 @@ with open(csvpath, newline='') as csvfile:
         if int(row[1]) > greatest_increase:
             greatest_increase = int(row[1])
             greatest_increase_month = row[0]
-            
+        
+        # Calculate The Greatest Decrease
+        if int(row[1]) < greatest_decrease:
+            greatest_decrease = int(row[1])
+            greatest_decrease_month = row[0]  
+
 
 
