@@ -71,6 +71,9 @@ with open(csvpath, newline='') as csvfile:
         print(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})")
         print(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})")
 
+# Write the file 
+output_file = os.path.join('.', 'PyBank', 'Resources', 'budget_data_revised.text')
+
 
 
 
