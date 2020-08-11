@@ -47,3 +47,10 @@ with open(csvpath, newline='') as csvfile:
         previous_profit = int(row[1])
         month_count.append(row[0])
 
+        #Calulate greatest increase 
+        if int(row[1]) > greatest_increase:
+            greatest_increase = int(row[1])
+            greatest_increase_month = row[0]
+            
+
+
