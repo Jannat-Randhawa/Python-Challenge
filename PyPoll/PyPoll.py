@@ -36,22 +36,34 @@ with open(csvpath, newline='') as csvfile:
             li_votes += 1
         else:
             otooley_votes += 1
+        
+    # Calculate the percentage of votes for each candidate 
+    khan_percent = khan_votes/ total_votes
+    correy_percent = correy_votes / total_votes
+    li_percent = li_votes / total_votes
+    otooley_percent = otooley_votes / total_votes
 
-        # Calculate the percentage of votes for each candidate 
-        khan_percent = khan_votes/ total_votes
-        correy_percent = correy_votes / total_votes
-        li_percent = li_votes / total_votes
-        otooley_percent = otooley_votes / total_votes
+    # Calculate winner of the election based on the maximum nuber of votes the candidate gets
 
-        # Calculate winner of the election based on the maximum nuber of votes the candidate gets
+    winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
 
-        winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
-
-        if winner == khan_votes:
-            winner_name = "Khan"
-        elif winner == correy_votes:
-            winner_name = "Correy"
-        elif winner == li_votes:
-            winner_name = "Li"
-        else:
-            winner_name = "Otooley" 
+    if winner == khan_votes:
+        winner_name = "Khan"
+    elif winner == correy_votes:
+        winner_name = "Correy"
+    elif winner == li_votes:
+        winner_name = "Li"
+    else:
+        winner_name = "Otooley" 
+# Print Analysis
+print(f"Election Results")
+print(f"---------------------------")
+print(f"Total Votes: {total_votes}")
+print(f"---------------------------")
+print(f"Khan: {khan_percent}({khan_votes})")
+print(f"Correy: {correy_percent}({correy_votes})")
+print(f"Li: {li_percent}({li_votes})")
+print(f"O'Tooley: {otooley_percent}({otooley_votes})")
+print(f"---------------------------")
+print(f"Winner: {winner_name}")
+print(f"---------------------------")
