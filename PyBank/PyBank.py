@@ -41,4 +41,9 @@ with open(csvpath, newline='') as csvfile:
         #Total Net amount 
         net_amount += int(row[1])
 
+        #Calculate monthly change 
+        revenue_change = int(row[1]) - previous_row 
+        monthly_change.append(revenue_change)
+        previous_profit = int(row[1])
+        month_count.append(row[0])
 
