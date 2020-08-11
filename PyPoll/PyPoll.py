@@ -19,4 +19,9 @@ with open(csvpath, newline='') as csvfile:
     
     # Read the header of the row 
     csv_header = next(csvfile)
-    
+
+    # Set a Loop 
+    for row in csvreader: 
+
+        # to calculate total number of votes per candidate 
+        total_votes += 1 
