@@ -63,6 +63,7 @@ with open(csvpath, newline='') as csvfile:
         highest = max(monthly_change)
         lowest = min(monthly_change)
 
+        # Print Analysis
         print(f"Financial Analysis")
         print(f"---------------------------")
         print(f"Total Months: {total_months}")
@@ -71,8 +72,20 @@ with open(csvpath, newline='') as csvfile:
         print(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})")
         print(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})")
 
-# Write the file 
+# Specify File To Write To
 output_file = os.path.join('.', 'PyBank', 'Resources', 'budget_data_revised.text')
+
+# Open File Using "Write" Mode. Specify The Variable To Hold The Contents
+with open(output_file, 'w',) as txtfile:
+
+# Write New Data
+    txtfile.write(f"Financial Analysis\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Total Months: {total_months}\n")
+    txtfile.write(f"Total: ${net_amount}\n")
+    txtfile.write(f"Average Change: ${average_change}\n")
+    txtfile.write(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})\n")
+    txtfile.write(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})\n")
 
 
 
