@@ -8,3 +8,6 @@ khan_votes = 0
 correy_votes = 0
 li_votes = 0
 otooley_votes = 0  
+
+# Set path for the file 
+csvpath = os.path.join(',','PyPoll','Resources','eletion_data.csv')
