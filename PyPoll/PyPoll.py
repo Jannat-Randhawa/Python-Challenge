@@ -25,3 +25,14 @@ with open(csvpath, newline='') as csvfile:
 
         # to calculate total number of votes per candidate 
         total_votes += 1 
+
+        # Calculate total number of votes each candidate won
+
+        if (row[2] == "Khan"):
+            khan_votes += 1 
+        elif (row[2] == "Correy"):
+            correy_votes += 1
+        elif (row [2] == "Li"):
+            li_votes += 1
+        else:
+            otooley_votes += 1
