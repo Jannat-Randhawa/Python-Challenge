@@ -67,3 +67,23 @@ print(f"O'Tooley: {otooley_percent}({otooley_votes})")
 print(f"---------------------------")
 print(f"Winner: {winner_name}")
 print(f"---------------------------")
+
+
+# Write File
+output_file = os.path.join('.', 'PyPoll', 'Resources', 'election_data_revised.text')
+
+# Open file with 'w'
+with open(output_file, 'w',) as txtfile:
+
+# Write New Data
+    txtfile.write(f"Election Results")
+    txtfile.write(f"---------------------------")
+    txtfile.write(f"Total Votes: {total_votes}")
+    txtfile.write(f"---------------------------")
+    txtfile.write(f"Khan: {khan_percent}({khan_votes}")
+    txtfile.write(f"Correy: {correy_percent}({correy_votes})")
+    txtfile.write(f"Li: {li_percent}({li_votes})")
+    txtfile.write(f"O'Tooley: {otooley_percent}({otooley_votes})")
+    txtfile.write(f"---------------------------")
+    txtfile.write(f"Winner: {winner_name}")
+    txtfile.write(f"---------------------------")

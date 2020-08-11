@@ -11,7 +11,7 @@ li_votes = 0
 otooley_votes = 0  
 
 # Set path for the file 
-csvpath = os.path.join(',','PyPoll','Resources','eletion_data.csv')
+csvpath = os.path.join('.','PyPoll','Resources','eletion_data.csv')
 
 # Open and Read csv file 
 with open(csvpath, newline='') as csvfile:
